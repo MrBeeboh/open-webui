@@ -8,21 +8,38 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				gray: {
-					50: 'var(--color-gray-50, #f9f9f9)',
-					100: 'var(--color-gray-100, #ececec)',
-					200: 'var(--color-gray-200, #e3e3e3)',
-					300: 'var(--color-gray-300, #cdcdcd)',
-					400: 'var(--color-gray-400, #b4b4b4)',
-					500: 'var(--color-gray-500, #9b9b9b)',
-					600: 'var(--color-gray-600, #676767)',
-					700: 'var(--color-gray-700, #4e4e4e)',
-					800: 'var(--color-gray-800, #333)',
-					850: 'var(--color-gray-850, #262626)',
-					900: 'var(--color-gray-900, #171717)',
-					950: 'var(--color-gray-950, #0d0d0d)'
-				}
-			},
+				colors: {
+    primary: {
+        50: '#f0f9ff',
+        100: '#e0f2fe',
+        200: '#bae6fd',
+        300: '#7dd3fc',
+        400: '#38bdf8',
+        500: '#0ea5e9',  // Perplexity's primary blue
+        600: '#0284c7',
+        700: '#0369a1',
+        800: '#075985',
+        900: '#0c4a6e',
+        950: '#082f49'
+    },
+    gray: {
+        50: '#f8fafc',  // Lighter background
+        100: '#f1f5f9',
+        200: '#e2e8f0',
+        300: '#cbd5e1',
+        400: '#94a3b8',
+        500: '#64748b',
+        600: '#475569',
+        700: '#334155',
+        800: '#1e293b',
+        850: '#1e293b',
+        900: '#0f172a',
+        950: '#020617'
+    },
+    background: '#ffffff',
+    surface: '#f8fafc',
+    border: '#e2e8f0'
+},
 			typography: {
 				DEFAULT: {
 					css: {
