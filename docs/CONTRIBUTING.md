@@ -1,5 +1,7 @@
 # Contributing to Open WebUI
 
+> **Note:** This repository is a fork (Perplexity-style UI). For contributing to the main Open WebUI project, see [open-webui/open-webui](https://github.com/open-webui/open-webui). Issues and PRs here are for this fork only.
+
 🚀 **Welcome, Contributors!** 🚀
 
 Your interest in contributing to Open WebUI is greatly appreciated. This document is here to guide you through the process, ensuring your contributions enhance the project effectively. Let's make Open WebUI even better, together!

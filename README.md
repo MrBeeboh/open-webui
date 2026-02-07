@@ -2,6 +2,8 @@
 
 > **This fork** adds a Perplexity-inspired look and feel: updated color theme (primary blue, cool grays), cleaner sidebar, centered landing/placeholder, suggestion chips, and input styling. Built on [Open WebUI](https://github.com/open-webui/open-webui).
 
+**To get this fork’s UI:** The Docker and pip instructions below install **upstream** Open WebUI (no Perplexity-style changes). To run *this* fork with the Perplexity-style UI, clone this repo and run from source — see [Open WebUI local development](https://docs.openwebui.com/getting-started/advanced-topics/development) (e.g. backend + frontend dev servers). Pre-built Docker images for this fork are not provided.
+
 ---
 
 # Open WebUI 👋
@@ -238,4 +240,4 @@ If you have any questions, suggestions, or need assistance, please open an issue
 
 ---
 
-Created by [Timothy Jaeryang Baek](https://github.com/tjbck) - Let's make Open WebUI even more amazing together! 💪
+Open WebUI was created by [Timothy Jaeryang Baek](https://github.com/tjbck). This Perplexity-style fork is maintained by [MrBeeboh](https://github.com/MrBeeboh).
