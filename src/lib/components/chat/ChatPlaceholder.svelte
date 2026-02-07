@@ -35,9 +35,9 @@
 </script>
 
 {#key mounted}
-	<div class="m-auto w-full max-w-6xl px-8 lg:px-20">
-		<div class="flex justify-start">
-			<div class="flex -space-x-4 mb-0.5" in:fade={{ duration: 200 }}>
+	<div class="m-auto w-full max-w-3xl px-6 lg:px-12 flex flex-col items-center">
+		<div class="flex justify-center">
+			<div class="flex -space-x-4 mb-1" in:fade={{ duration: 200 }}>
 				{#each models as model, modelIdx}
 					<button
 						on:click={() => {
@@ -54,7 +54,7 @@
 						>
 							<img
 								src={`${WEBUI_API_BASE_URL}/models/model/profile/image?id=${model?.id}&lang=${$i18n.language}`}
-								class=" size-[2.7rem] rounded-full border-[1px] border-gray-100 dark:border-none"
+								class=" size-12 rounded-full border-2 border-white dark:border-gray-800 shadow-sm"
 								alt="logo"
 								draggable="false"
 							/>
@@ -67,7 +67,7 @@
 		{#if $temporaryChatEnabled}
 			<Tooltip
 				content={$i18n.t("This chat won't appear in history and your messages will not be saved.")}
-				className="w-full flex justify-start mb-0.5"
+				className="w-full flex justify-center mb-0.5"
 				placement="top"
 			>
 				<div class="flex items-center gap-2 text-gray-500 text-lg mt-2 w-fit">
@@ -77,10 +77,10 @@
 		{/if}
 
 		<div
-			class=" mt-2 mb-4 text-3xl text-gray-800 dark:text-gray-100 text-left flex items-center gap-4 font-primary"
+			class=" mt-4 mb-5 text-center font-primary"
 		>
 			<div>
-				<div class=" capitalize line-clamp-1" in:fade={{ duration: 200 }}>
+				<div class="text-3xl font-semibold text-gray-900 dark:text-gray-50 tracking-tight" in:fade={{ duration: 200 }}>
 					{#if models[selectedModelIdx]?.name}
 						{models[selectedModelIdx]?.name}
 					{:else}
@@ -91,7 +91,7 @@
 				<div in:fade={{ duration: 200, delay: 200 }}>
 					{#if models[selectedModelIdx]?.info?.meta?.description ?? null}
 						<div
-							class="mt-0.5 text-base font-normal text-gray-500 dark:text-gray-400 line-clamp-3 markdown"
+							class="mt-2 text-base font-normal text-gray-500 dark:text-gray-400 line-clamp-3 markdown max-w-lg mx-auto"
 						>
 							{@html marked.parse(
 								sanitizeResponseContent(
@@ -100,10 +100,11 @@
 							)}
 						</div>
 						{#if models[selectedModelIdx]?.info?.meta?.user}
-							<div class="mt-0.5 text-sm font-normal text-gray-400 dark:text-gray-500">
+							<div class="mt-1 text-sm font-normal text-gray-400 dark:text-gray-500">
 								By
 								{#if models[selectedModelIdx]?.info?.meta?.user.community}
 									<a
+										class="text-primary-500 hover:text-primary-600 transition"
 										href="https://openwebui.com/m/{models[selectedModelIdx]?.info?.meta?.user
 											.username}"
 										>{models[selectedModelIdx]?.info?.meta?.user.name
@@ -116,7 +117,7 @@
 							</div>
 						{/if}
 					{:else}
-						<div class=" text-gray-400 dark:text-gray-500 line-clamp-1 font-p">
+						<div class="mt-1 text-lg text-gray-400 dark:text-gray-500">
 							{$i18n.t('How can I help you today?')}
 						</div>
 					{/if}
@@ -126,7 +127,7 @@
 
 		<div class=" w-full font-primary" in:fade={{ duration: 200, delay: 300 }}>
 			<Suggestions
-				className="grid grid-cols-2"
+				className="grid grid-cols-2 gap-2"
 				suggestionPrompts={atSelectedModel?.info?.meta?.suggestion_prompts ??
 					models[selectedModelIdx]?.info?.meta?.suggestion_prompts ??
 					$config?.default_prompt_suggestions ??

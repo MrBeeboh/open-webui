@@ -648,7 +648,7 @@
 
 {#if !$mobile && !$showSidebar}
 	<div
-		class=" pt-[7px] pb-2 px-2 flex flex-col justify-between text-black dark:text-white hover:bg-gray-50/30 dark:hover:bg-gray-950/30 h-full z-10 transition-all border-e-[0.5px] border-gray-50 dark:border-gray-850/30"
+		class=" pt-[7px] pb-2 px-2 flex flex-col justify-between text-gray-700 dark:text-white hover:bg-gray-50/50 dark:hover:bg-gray-950/30 h-full z-10 transition-all border-e-[0.5px] border-gray-200/50 dark:border-gray-800/30"
 		id="sidebar"
 	>
 		<button
@@ -844,7 +844,7 @@
 		bind:this={navElement}
 		id="sidebar"
 		class="h-screen max-h-[100dvh] min-h-screen select-none {$showSidebar
-			? `${$mobile ? 'bg-gray-50 dark:bg-gray-950' : 'bg-gray-50/70 dark:bg-gray-950/70'} z-50`
+			? `${$mobile ? 'bg-white dark:bg-gray-950' : 'bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl'} z-50`
 			: ' bg-transparent z-0 '} {$isApp
 			? `ml-[4.5rem] md:ml-0 `
 			: ' transition-all duration-300 '} shrink-0 text-gray-900 dark:text-gray-200 text-sm fixed top-0 left-0 overflow-x-hidden
@@ -858,7 +858,7 @@
 				: 'invisible'}"
 		>
 			<div
-				class="sidebar px-[0.5625rem] pt-2 pb-1.5 flex justify-between space-x-1 text-gray-600 dark:text-gray-400 sticky top-0 z-10 -mb-3"
+				class="sidebar px-[0.5625rem] pt-2 pb-1.5 flex justify-between space-x-1 text-gray-500 dark:text-gray-400 sticky top-0 z-10 -mb-3"
 			>
 				<a
 					class="flex items-center rounded-xl size-8.5 h-full justify-center hover:bg-gray-100/50 dark:hover:bg-gray-850/50 transition no-drag-region"
@@ -876,8 +876,8 @@
 
 				<a href="/" class="flex flex-1 px-1.5" on:click={newChatHandler}>
 					<div
-						id="sidebar-webui-name"
-						class=" self-center font-medium text-gray-850 dark:text-white font-primary"
+					id="sidebar-webui-name"
+					class=" self-center font-semibold text-gray-900 dark:text-white font-primary tracking-tight"
 					>
 						{$WEBUI_NAME}
 					</div>
@@ -904,7 +904,7 @@
 				<div
 					class="{scrollTop > 0
 						? 'visible'
-						: 'invisible'} sidebar-bg-gradient-to-b bg-linear-to-b from-gray-50 dark:from-gray-950 to-transparent from-50% pointer-events-none absolute inset-0 -z-10 -mb-6"
+						: 'invisible'} sidebar-bg-gradient-to-b bg-linear-to-b from-white dark:from-gray-950 to-transparent from-50% pointer-events-none absolute inset-0 -z-10 -mb-6"
 				></div>
 			</div>
 
@@ -922,11 +922,11 @@
 					<div class="px-[0.4375rem] flex justify-center text-gray-800 dark:text-gray-200">
 						<a
 							id="sidebar-new-chat-button"
-							class="group grow flex items-center space-x-3 rounded-2xl px-2.5 py-2 hover:bg-gray-100 dark:hover:bg-gray-900 transition outline-none"
-							href="/"
-							draggable="false"
-							on:click={newChatHandler}
-							aria-label={$i18n.t('New Chat')}
+						class="group grow flex items-center space-x-3 rounded-2xl px-2.5 py-2 hover:bg-primary-50 dark:hover:bg-primary-500/10 text-gray-700 hover:text-primary-600 dark:text-gray-200 dark:hover:text-primary-400 transition-all duration-150 outline-none"
+						href="/"
+						draggable="false"
+						on:click={newChatHandler}
+						aria-label={$i18n.t('New Chat')}
 						>
 							<div class="self-center">
 								<PencilSquare className=" size-4.5" strokeWidth="2" />
@@ -943,10 +943,10 @@
 					<div class="px-[0.4375rem] flex justify-center text-gray-800 dark:text-gray-200">
 						<button
 							id="sidebar-search-button"
-							class="group grow flex items-center space-x-3 rounded-2xl px-2.5 py-2 hover:bg-gray-100 dark:hover:bg-gray-900 transition outline-none"
-							on:click={() => {
-								showSearch.set(true);
-							}}
+						class="group grow flex items-center space-x-3 rounded-2xl px-2.5 py-2 hover:bg-primary-50 dark:hover:bg-primary-500/10 text-gray-700 hover:text-primary-600 dark:text-gray-200 dark:hover:text-primary-400 transition-all duration-150 outline-none"
+						on:click={() => {
+							showSearch.set(true);
+						}}
 							draggable="false"
 							aria-label={$i18n.t('Search')}
 						>
@@ -965,8 +965,8 @@
 						<div class="px-[0.4375rem] flex justify-center text-gray-800 dark:text-gray-200">
 							<a
 								id="sidebar-notes-button"
-								class="grow flex items-center space-x-3 rounded-2xl px-2.5 py-2 hover:bg-gray-100 dark:hover:bg-gray-900 transition"
-								href="/notes"
+							class="grow flex items-center space-x-3 rounded-2xl px-2.5 py-2 hover:bg-primary-50 dark:hover:bg-primary-500/10 text-gray-700 hover:text-primary-600 dark:text-gray-200 dark:hover:text-primary-400 transition-all duration-150"
+							href="/notes"
 								on:click={itemClickHandler}
 								draggable="false"
 								aria-label={$i18n.t('Notes')}
@@ -986,8 +986,8 @@
 						<div class="px-[0.4375rem] flex justify-center text-gray-800 dark:text-gray-200">
 							<a
 								id="sidebar-workspace-button"
-								class="grow flex items-center space-x-3 rounded-2xl px-2.5 py-2 hover:bg-gray-100 dark:hover:bg-gray-900 transition"
-								href="/workspace"
+							class="grow flex items-center space-x-3 rounded-2xl px-2.5 py-2 hover:bg-primary-50 dark:hover:bg-primary-500/10 text-gray-700 hover:text-primary-600 dark:text-gray-200 dark:hover:text-primary-400 transition-all duration-150"
+							href="/workspace"
 								on:click={itemClickHandler}
 								draggable="false"
 								aria-label={$i18n.t('Workspace')}
@@ -1356,7 +1356,7 @@
 
 			<div class="px-1.5 pt-1.5 pb-2 sticky bottom-0 z-10 -mt-3 sidebar">
 				<div
-					class=" sidebar-bg-gradient-to-t bg-linear-to-t from-gray-50 dark:from-gray-950 to-transparent from-50% pointer-events-none absolute inset-0 -z-10 -mt-6"
+					class=" sidebar-bg-gradient-to-t bg-linear-to-t from-white dark:from-gray-950 to-transparent from-50% pointer-events-none absolute inset-0 -z-10 -mt-6"
 				></div>
 				<div class="flex flex-col font-primary">
 					{#if $user !== undefined && $user !== null}
@@ -1371,7 +1371,7 @@
 							}}
 						>
 							<div
-								class=" flex items-center rounded-2xl py-2 px-1.5 w-full hover:bg-gray-100/50 dark:hover:bg-gray-900/50 transition"
+								class=" flex items-center rounded-2xl py-2 px-1.5 w-full hover:bg-gray-100/60 dark:hover:bg-gray-800/40 transition-all duration-150"
 							>
 								<div class=" self-center mr-3 relative">
 									<img
@@ -1407,7 +1407,7 @@
 
 	{#if !$mobile}
 		<div
-			class="relative flex items-center justify-center group border-l border-gray-50 dark:border-gray-850/30 hover:border-gray-200 dark:hover:border-gray-800 transition z-20"
+			class="relative flex items-center justify-center group border-l border-gray-200/50 dark:border-gray-800/30 hover:border-primary-300 dark:hover:border-primary-500/30 transition z-20"
 			id="sidebar-resizer"
 			on:mousedown={resizeStartHandler}
 			role="separator"

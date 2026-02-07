@@ -119,7 +119,8 @@ textarea::placeholder {
 }
 
 .font-primary {
-	font-family: 'Archivo', 'Vazirmatn', sans-serif;
+	font-family: 'Inter', 'Archivo', 'Vazirmatn', sans-serif;
+	letter-spacing: -0.011em;
 }
 
 .drag-region {
@@ -141,7 +142,7 @@ li p {
 
 ::-webkit-scrollbar-thumb {
 	--tw-border-opacity: 1;
-	background-color: rgba(215, 215, 215, 0.6);
+	background-color: rgba(148, 163, 184, 0.35);
 	border-color: rgba(255, 255, 255, var(--tw-border-opacity));
 	border-radius: 9999px;
 	border-width: 1px;
@@ -149,7 +150,7 @@ li p {
 
 /* Dark theme scrollbar styles */
 .dark ::-webkit-scrollbar-thumb {
-	background-color: rgba(67, 67, 67, 0.6); /* Darker color for dark theme */
+	background-color: rgba(71, 85, 105, 0.4);
 	border-color: rgba(0, 0, 0, var(--tw-border-opacity));
 }
 
@@ -686,13 +687,13 @@ input[type='number'] {
 }
 
 body {
-	background: #fff;
-	color: #000;
+	background: #f8fafc;
+	color: #0f172a;
 }
 
 .dark body {
-	background: #171717;
-	color: #eee;
+	background: #0f172a;
+	color: #e2e8f0;
 }
 
 /* Position the handle relative to each LI */
