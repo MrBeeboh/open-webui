@@ -1,14 +1,16 @@
+# Open WebUI — Perplexity-style UI
+
+> **This fork** adds a Perplexity-inspired look and feel: updated color theme (primary blue, cool grays), cleaner sidebar, centered landing/placeholder, suggestion chips, and input styling. Built on [Open WebUI](https://github.com/open-webui/open-webui).
+
+---
+
 # Open WebUI 👋
 
-![GitHub stars](https://img.shields.io/github/stars/open-webui/open-webui?style=social)
-![GitHub forks](https://img.shields.io/github/forks/open-webui/open-webui?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/open-webui/open-webui?style=social)
-![GitHub repo size](https://img.shields.io/github/repo-size/open-webui/open-webui)
-![GitHub language count](https://img.shields.io/github/languages/count/open-webui/open-webui)
-![GitHub top language](https://img.shields.io/github/languages/top/open-webui/open-webui)
-![GitHub last commit](https://img.shields.io/github/last-commit/open-webui/open-webui?color=red)
+![GitHub stars](https://img.shields.io/github/stars/MrBeeboh/open-webui?style=social)
+![GitHub forks](https://img.shields.io/github/forks/MrBeeboh/open-webui?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/MrBeeboh/open-webui)
+![GitHub last commit](https://img.shields.io/github/last-commit/MrBeeboh/open-webui?color=red)
 [![Discord](https://img.shields.io/badge/Discord-Open_WebUI-blue?logo=discord&logoColor=white)](https://discord.gg/5rJgQTnV4s)
-[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/tjbck)
 
 ![Open WebUI Banner](./banner.png)
 
